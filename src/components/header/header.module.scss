@@ -1,0 +1,106 @@
+.full {
+  width: 100%;
+  height: 70px;
+  background-color: lightblue;
+  position: sticky;
+  top: 0;
+  left: 0;
+
+  .container {
+    max-width: 1440px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 5px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    // .left {
+    // }
+
+    .right {
+      ul {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        li {
+          a {
+            text-decoration: none;
+            color: rgba(0, 0, 0, 0.6);
+            position: relative;
+
+            &:after {
+              content: '';
+              position: absolute;
+              width: 100%;
+              height: 2px;
+              background-color: rgba(0, 0, 0, 0.6);
+              left: 0;
+              bottom: -2px;
+              border-radius: 10px;
+              transform-origin: left;
+              transition: transform ease 0.3s;
+              transform-origin: bottom right;
+              transform: scaleX(0%);
+            }
+
+            &:hover:after {
+              transform: scaleX(100%);
+              transform-origin: bottom left;
+            }
+          }
+
+          .active-link {
+            color: rgba(0, 0, 0, 1);
+            border-bottom: 2px solid black;
+          }
+        }
+      }
+
+      @media only screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    .sm {
+      display: none;
+      @media only screen and (max-width: 768px) {
+        display: block;
+      }
+    }
+
+    .mobile-menu-container {
+      position: fixed;
+      top: 70px;
+      right: 0;
+      width: 100%;
+      height: 100vh;
+      height: 100dvh;
+      background-color: grey;
+      z-index: 5;
+      transition: transform ease 0.7s;
+      transform: translateX(100%);
+      transform-origin: top;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 30px;
+        li {
+          a {
+            text-decoration: none;
+            color: black;
+          }
+        }
+      }
+    }
+    .active {
+      transform: translateX(0);
+    }
+  }
+}
