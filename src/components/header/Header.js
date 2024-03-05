@@ -4,13 +4,24 @@ import Link from 'next/link';
 import styles from './header.module.scss';
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
-import { motion, useScroll, useMotionValueEvent } from 'framer';
+import {
+  motion,
+  useScroll,
+  useMotionValueEvent,
+  AnimatePresence,
+} from 'framer';
+import Image from 'next/image';
 
 const Header = () => {
   const [isActive, setIsActive] = useState(false);
   const pathname = usePathname();
   const { scrollY } = useScroll();
   const [hide, setHide] = useState(false);
+  const isLinkActive = (path) => path === pathname;
+
+  useEffect(() => {
+    setIsActive(false);
+  }, [pathname]);
 
   useMotionValueEvent(scrollY, 'change', (latest) => {
     const previous = scrollY.getPrevious();
@@ -27,7 +38,6 @@ const Header = () => {
       : (document.body.style.overflow = 'visible');
   }, [isActive]);
 
-  const isLinkActive = (path) => path === pathname;
   const handleClick = () => {
     setIsActive(!isActive);
   };
@@ -44,7 +54,11 @@ const Header = () => {
     >
       <nav className={styles.container}>
         <div className={styles.left}>
-          <Link href={'/'}>LOGO</Link>
+          <Link href={'/'}>
+            <div className={styles['image-container']}>
+              <Image src={'/images/logo.png'} alt='logo' fill priority />
+            </div>
+          </Link>
         </div>
         <div className={styles.right}>
           <ul>
@@ -71,7 +85,14 @@ const Header = () => {
               <Link href={'#'}>Products and Services</Link>
             </li>
             <li>
-              <Link href={'/news'}>News</Link>
+              <Link
+                href={'/news'}
+                className={
+                  isLinkActive('/news') ? `${styles['active-link']}` : ''
+                }
+              >
+                News
+              </Link>
             </li>
             <li>
               <Link href={'#'}>Contact</Link>
@@ -81,34 +102,103 @@ const Header = () => {
         <div className={styles.sm}>
           <button onClick={handleClick}>{isActive ? 'x' : '='}</button>
         </div>
-        <div
-          className={
-            isActive
-              ? `${styles['mobile-menu-container']} ${styles.active}`
-              : `${styles['mobile-menu-container']}`
-          }
-        >
-          <ul>
-            <li>
-              <Link href={'/'}>Home</Link>
-            </li>
-            <li>
-              <Link href={'/about'}>About</Link>
-            </li>
-            <li>
-              <Link href={'#'}>Products and Services</Link>
-            </li>
-            <li>
-              <Link href={'/news'}>News</Link>
-            </li>
-            <li>
-              <Link href={'#'}>Contact</Link>
-            </li>
-          </ul>
-        </div>
+        {/* MOBILE */}
+        <AnimatePresence>
+          {isActive && (
+            <motion.div
+              variants={mobileVars}
+              initial='initial'
+              animate='animate'
+              exit='exit'
+              className={`${styles['mobile-menu-container']}`}
+            >
+              <motion.ul
+                variants={staggerVars}
+                initial='initial'
+                animate='open'
+                exit='initial'
+              >
+                <li>
+                  <motion.div variants={mobileLinkVars}>
+                    <Link href={'/'}>Home</Link>
+                  </motion.div>
+                </li>
+                <li>
+                  <motion.div variants={mobileLinkVars}>
+                    <Link href={'/about'}>About</Link>
+                  </motion.div>
+                </li>
+                <li>
+                  <motion.div variants={mobileLinkVars}>
+                    <Link href={'#'}>Products and Services</Link>
+                  </motion.div>
+                </li>
+                <li>
+                  <motion.div variants={mobileLinkVars}>
+                    <Link href={'/news'}>News</Link>
+                  </motion.div>
+                </li>
+                <li>
+                  <motion.div variants={mobileLinkVars}>
+                    <Link href={'#'}>Contact</Link>
+                  </motion.div>
+                </li>
+              </motion.ul>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </nav>
     </motion.div>
   );
+};
+
+const mobileVars = {
+  initial: {
+    scaleY: 0,
+  },
+  animate: {
+    scaleY: 1,
+    transition: {
+      duration: 0.5,
+      ease: [0.65, 0, 0.35, 1],
+    },
+  },
+  exit: {
+    scaleY: 0,
+    transition: {
+      delay: 0.5,
+      duration: 0.5,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  },
+};
+
+const mobileLinkVars = {
+  initial: {
+    y: '100%',
+  },
+  open: {
+    y: 0,
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
+
+const staggerVars = {
+  initial: {
+    transition: {
+      staggerChildren: 0.1,
+      staggerDirection: -1,
+    },
+  },
+  open: {
+    transition: {
+      delayChildren: 0.3,
+      staggerChildren: 0.1,
+      staggerDirection: 1,
+    },
+  },
 };
 
 export default Header;
