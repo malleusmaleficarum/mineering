@@ -7,14 +7,7 @@ const News = async () => {
 
   return (
     <div className={styles.container}>
-      {data.map((data, index) => (
-        <div key={data.id}>
-          <p>id : {data.id}</p>
-          <p>title : {data.title}</p>
-          <p>body : {data.body}</p>
-          <br />
-        </div>
-      ))}
+      {data}
       <LoadMore />
     </div>
   );
