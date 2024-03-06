@@ -21,6 +21,7 @@ const Header = () => {
 
   useEffect(() => {
     setIsActive(false);
+    // scrollToTop();
   }, [pathname]);
 
   useMotionValueEvent(scrollY, 'change', (latest) => {
@@ -40,6 +41,13 @@ const Header = () => {
 
   const handleClick = () => {
     setIsActive(!isActive);
+  };
+
+  const scrollToTop = () => {
+    scrollTo({
+      behavior: 'smooth',
+      top: 0,
+    });
   };
 
   return (
