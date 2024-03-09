@@ -11,10 +11,14 @@ import {
   AnimatePresence,
 } from 'framer';
 import Image from 'next/image';
+import Breadcrumb from './Breadcrumb';
 
 const Header = () => {
   const [isActive, setIsActive] = useState(false);
+  const [breadcrumbData, setBreadCrumbData] = useState([]);
   const pathname = usePathname();
+  const path = pathname.split('/').filter((path) => path);
+  path.unshift('home');
   const { scrollY } = useScroll();
   const [hide, setHide] = useState(false);
   const isLinkActive = (path) => path === pathname;
@@ -90,7 +94,7 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link href={'#'}>Products and Services</Link>
+              <Link href={'/products'}>Products and Services</Link>
             </li>
             <li>
               <Link
@@ -156,6 +160,7 @@ const Header = () => {
           )}
         </AnimatePresence>
       </nav>
+      <Breadcrumb path={path} />
     </motion.div>
   );
 };

@@ -1,0 +1,17 @@
+.container {
+  max-width: 1440px;
+  background-color: lightpink;
+  padding: 8px 30px;
+  font-size: 12px;
+  position: sticky;
+  display: flex;
+  align-items: center;
+
+  a {
+    text-transform: capitalize;
+  }
+
+  p {
+    text-transform: capitalize;
+  }
+}
