@@ -30,7 +30,7 @@ const Header = () => {
 
   useMotionValueEvent(scrollY, 'change', (latest) => {
     const previous = scrollY.getPrevious();
-    if (latest > previous && latest > 20) {
+    if (latest > previous && latest > 80) {
       setHide(true);
     } else {
       setHide(false);
@@ -94,7 +94,44 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link href={'/products'}>Products and Services</Link>
+              <Link href={'/products'}>
+                <p>
+                  Services{' '}
+                  <span>
+                    <Image
+                      className={styles.arrow}
+                      src={'/images/arrow.png'}
+                      width={10}
+                      height={10}
+                      priority
+                    />
+                  </span>
+                </p>
+              </Link>
+              <ul className={styles['drop-down']}>
+                <li>
+                  <Link href={'#'}>
+                    Asset Integrity Management System (AIMS)
+                  </Link>
+                </li>
+                <li>
+                  <Link href={'#'}>
+                    Mining Technology and Mineral Processing
+                  </Link>
+                </li>
+                <li>
+                  <Link href={'#'}>Engineering Services</Link>
+                </li>
+                <li>
+                  <Link href={'#'}>Professional Development Programs</Link>
+                </li>
+                <li>
+                  <Link href={'#'}>Engineering Software Development</Link>
+                </li>
+                <li>
+                  <Link href={'#'}>Geothermal, Coal and Hydropower Plant</Link>
+                </li>
+              </ul>
             </li>
             <li>
               <Link
@@ -103,11 +140,33 @@ const Header = () => {
                   isLinkActive('/news') ? `${styles['active-link']}` : ''
                 }
               >
-                News
+                <p>
+                  Media{' '}
+                  <span>
+                    <Image
+                      className={styles.arrow}
+                      src={'/images/arrow.png'}
+                      width={10}
+                      height={10}
+                      priority
+                    />
+                  </span>
+                </p>
               </Link>
+              <ul className={styles['drop-down']}>
+                <li>
+                  <Link href={'#'}>Previous Projects</Link>
+                </li>
+                <li>
+                  <Link href={'#'}>News</Link>
+                </li>
+                <li>
+                  <Link href={'#'}>Resources</Link>
+                </li>
+              </ul>
             </li>
             <li>
-              <Link href={'#'}>Contact</Link>
+              <Link href={'/contact'}>Contact</Link>
             </li>
           </ul>
         </div>

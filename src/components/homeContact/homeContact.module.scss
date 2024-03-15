@@ -1,0 +1,68 @@
+@import '../../app/var';
+
+.container {
+  max-width: $max-width;
+  position: relative;
+  margin-top: -10px;
+  margin-bottom: -10px;
+  height: 400px;
+  z-index: 1;
+
+  .image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    z-index: 0;
+    img {
+      object-fit: cover;
+    }
+  }
+
+  .content-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 80%;
+    height: 100%;
+    gap: 40px;
+    margin: 0px auto;
+
+    h1 {
+      font-size: 32px;
+      font-weight: 700;
+      color: #f0f0f0;
+      opacity: 0.9;
+    }
+
+    p {
+      font-size: 16px;
+      color: #f0f0f0;
+    }
+
+    a {
+      font-size: 14px;
+      font-weight: 300;
+      padding: 12px 28px;
+      border: 1px solid $primary-color;
+      border-radius: 20px;
+      color: $primary-color;
+      background-color: #f0f0f0;
+      display: inline-block;
+      text-decoration: none;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        color: #f0f0f0;
+        background-color: $primary-color;
+      }
+    }
+  }
+}

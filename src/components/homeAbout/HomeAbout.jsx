@@ -5,13 +5,12 @@ const HomeAbout = () => {
     <div className={styles.container}>
       <div className={styles.content}>
         <p>
-          &quot;Petroneering LLC is a recognized leader among boutique offshore
-          technology development and consulting firms. We are headquartered
-          right in the energy corridor of Houston, Texas, U.S.A. with satellite
-          and affiliate offices around the world. We&apos;ve designed and
-          engineered our patented offshore technologies and will make functional
-          knowledge, deep sector experience and global networks available to our
-          oil & gas clients worldwide.&quot;
+          &quot;Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Expedita quae cupiditate, unde cumque aspernatur maxime dolor nostrum
+          sequi aliquid, non facere rem debitis alias id nam aliquam commodi!
+          Quo, natus. Odio excepturi molestiae, similique assumenda numquam quos
+          earum ut accusantium aliquid amet obcaecati, adipisci dolore
+          consectetur debitis ipsum hic velit!&quot;
         </p>
       </div>
     </div>

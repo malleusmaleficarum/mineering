@@ -5,7 +5,7 @@ const Footer = () => {
       <div className={styles.container}>
         <div className={styles.left}>
           {' '}
-          &#169; {new Date().getFullYear()} Mineering. All rights reserved.
+          &#169; {new Date().getFullYear()} Mineering. All Rights Reserved.
         </div>
       </div>
     </div>

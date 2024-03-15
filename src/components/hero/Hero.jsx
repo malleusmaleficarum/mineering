@@ -18,7 +18,7 @@ const Hero = () => {
           <br /> Shores of Solutions
         </h1>
         <h2>Your Offshore Technology Consultants</h2>
-        <Link href={'#'}>All Services</Link>
+        {/* <Link href={'#'}>All Services</Link> */}
       </div>
     </div>
   );

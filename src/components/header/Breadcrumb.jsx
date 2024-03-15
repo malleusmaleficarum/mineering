@@ -7,7 +7,7 @@ const Breadcrumb = ({ path }) => {
       {path.map((p, i) => {
         const lastItem = i === path.length - 1;
         if (lastItem) {
-          return <p key={i}>{decodeURI(p)}</p>;
+          return <p key={i}>{decodeURI(p.replace('-', ' '))}</p>;
         } else if (i === 0) {
           return (
             <div key={i}>
