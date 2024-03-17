@@ -10,14 +10,14 @@
 
     img {
       object-fit: cover;
-      object-position: center bottom;
+      object-position: center;
     }
   }
 
   .overlay {
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.55);
+    background-color: rgba(0, 0, 0, 0.2);
     position: absolute;
     top: 0;
     left: 0;
@@ -39,8 +39,8 @@
       color: white;
       font-size: 48px;
       font-weight: 700;
-      letter-spacing: 5px;
       line-height: 1.1;
+      text-transform: uppercase;
     }
 
     h2 {
@@ -49,6 +49,7 @@
       font-size: 24px;
       letter-spacing: 5px;
       line-height: 1.1;
+      text-align: center;
     }
 
     a {

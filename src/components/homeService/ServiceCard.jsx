@@ -2,9 +2,9 @@ import Image from 'next/image';
 import styles from './serviceCard.module.scss';
 import Link from 'next/link';
 
-const ServiceCard = ({ title }) => {
+const ServiceCard = ({ link, title }) => {
   return (
-    <Link href={'#'} className={styles.container}>
+    <Link href={link} className={styles.container}>
       {/* Image */}
       <div className={styles['image-container']}>
         <Image src={'/images/service_1.png'} fill priority />

@@ -1,0 +1,78 @@
+@import '../../var';
+
+.container {
+  max-width: 1440px;
+
+  .content-container {
+    padding: 50px 30px;
+    border-radius: 10px;
+    margin-top: -10px;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    background-color: #f0f0f0;
+
+    p {
+      margin: 0 auto;
+      margin-bottom: 50px;
+      color: black;
+      font-weight: 300;
+      font-size: 16px;
+      letter-spacing: 1.3px;
+      line-height: 1.1;
+      max-width: 1080px;
+    }
+
+    .image-wrapper {
+      position: relative;
+      max-width: 1080px;
+      height: 400px;
+      margin: 0 auto;
+      margin-bottom: 50px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),
+        0 2px 4px -2px rgb(0 0 0 / 0.1);
+
+      img {
+        object-fit: cover;
+      }
+    }
+  }
+
+  .child-container {
+    display: flex;
+    background-color: #e0e0e0;
+    padding: 30px;
+
+    .left {
+      max-width: 1080px;
+      margin: 0 auto;
+      flex: 0.6;
+      h1 {
+        color: $primary-color;
+      }
+    }
+
+    .right {
+      max-width: 1080px;
+      margin: 0 auto;
+      flex: 1;
+
+      p {
+        font-size: 14px;
+        letter-spacing: 1.3px;
+        line-height: 1.1;
+        font-weight: 300;
+      }
+    }
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+
+      h1 {
+        text-align: end;
+      }
+    }
+  }
+}

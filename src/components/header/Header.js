@@ -94,7 +94,7 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link href={'/products'}>
+              <Link href={'/services'}>
                 <p>
                   Services{' '}
                   <span>
@@ -110,32 +110,38 @@ const Header = () => {
               </Link>
               <ul className={styles['drop-down']}>
                 <li>
-                  <Link href={'#'}>
+                  <Link href={'/services/aims'}>
                     Asset Integrity Management System (AIMS)
                   </Link>
                 </li>
                 <li>
-                  <Link href={'#'}>
+                  <Link href={'/services/mining'}>
                     Mining Technology and Mineral Processing
                   </Link>
                 </li>
                 <li>
-                  <Link href={'#'}>Engineering Services</Link>
+                  <Link href={'/services/aims'}>Engineering Services</Link>
                 </li>
                 <li>
-                  <Link href={'#'}>Professional Development Programs</Link>
+                  <Link href={'/services/aims'}>
+                    Professional Development Programs
+                  </Link>
                 </li>
                 <li>
-                  <Link href={'#'}>Engineering Software Development</Link>
+                  <Link href={'/services/aims'}>
+                    Engineering Software Development
+                  </Link>
                 </li>
                 <li>
-                  <Link href={'#'}>Geothermal, Coal and Hydropower Plant</Link>
+                  <Link href={'/services/aims'}>
+                    Geothermal, Coal and Hydropower Plant
+                  </Link>
                 </li>
               </ul>
             </li>
             <li>
               <Link
-                href={'/news'}
+                href={'/media'}
                 className={
                   isLinkActive('/news') ? `${styles['active-link']}` : ''
                 }
@@ -155,13 +161,13 @@ const Header = () => {
               </Link>
               <ul className={styles['drop-down']}>
                 <li>
-                  <Link href={'#'}>Previous Projects</Link>
+                  <Link href={'/media'}>Previous Projects</Link>
                 </li>
                 <li>
-                  <Link href={'#'}>News</Link>
+                  <Link href={'/media'}>News</Link>
                 </li>
                 <li>
-                  <Link href={'#'}>Resources</Link>
+                  <Link href={'/media'}>Resources</Link>
                 </li>
               </ul>
             </li>
@@ -201,7 +207,7 @@ const Header = () => {
                 </li>
                 <li>
                   <motion.div variants={mobileLinkVars}>
-                    <Link href={'#'}>Products and Services</Link>
+                    <Link href={'#'}>Services</Link>
                   </motion.div>
                 </li>
                 <li>

@@ -15,7 +15,7 @@ const HomeContact = () => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.{' '}
         </p>
-        <Link href={'#'}>Contact Us</Link>
+        <Link href={'/contact'}>Contact Us</Link>
       </div>
     </div>
   );

@@ -1,6 +1,11 @@
 import Image from 'next/image';
 import styles from './page.module.scss';
 
+export const metadata = {
+  title: 'Contact | Mineering',
+  description: '',
+};
+
 const Contact = () => {
   return (
     <div className={styles.container}>

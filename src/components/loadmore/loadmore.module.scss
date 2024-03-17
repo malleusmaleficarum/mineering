@@ -1,0 +1,25 @@
+@import '../../app/var';
+
+.button-container {
+  display: flex;
+  justify-content: center;
+
+  .button {
+    font-size: 14px;
+    font-weight: 300;
+    padding: 12px 28px;
+    border: 1px solid $primary-color;
+    border-radius: 20px;
+    background-color: transparent;
+    color: $primary-color;
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      color: #f0f0f0;
+      background-color: $primary-color;
+    }
+  }
+}

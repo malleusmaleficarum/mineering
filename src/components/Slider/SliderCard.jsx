@@ -7,7 +7,7 @@ const SliderCard = () => {
     <Link href={'#'} className={styles.container}>
       {/* Image */}
       <div className={styles['img-container']}>
-        <Image src={'/images/news.png'} fill priority />
+        <Image src={'/images/media.png'} fill priority />
       </div>
       <h2>Govt hikes windfall tax on petroleum crude</h2>
       <h3>Resources</h3>

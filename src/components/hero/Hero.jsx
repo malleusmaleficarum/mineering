@@ -7,7 +7,7 @@ const Hero = () => {
     <div className={styles.container}>
       {/* BACKGROUND IMAGE */}
       <div className={styles['img-wrapper']}>
-        <Image src={'/images/hero-image.png'} alt='Hero Image' fill priority />
+        <Image src={'/images/hero-image.jpg'} alt='Hero Image' fill priority />
       </div>
       {/* OVERLAY */}
       <div className={styles.overlay}></div>

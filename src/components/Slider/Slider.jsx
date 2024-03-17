@@ -18,7 +18,7 @@ const Slider = () => {
     <div className={styles.container}>
       <div className={styles['header-container']}>
         <h1>Media</h1>
-        <Link href={'/news'}>See More</Link>
+        <Link href={'/media'}>See More</Link>
       </div>
       {ready && (
         <div className={styles['card-container']}>
