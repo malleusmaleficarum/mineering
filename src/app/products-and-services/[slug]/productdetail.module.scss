@@ -1,7 +1,7 @@
 @import '../../var';
 
 .container {
-  max-width: 1440px;
+  width: 100%;
 
   .content-container {
     padding: 50px 30px;
@@ -40,11 +40,15 @@
     }
   }
 
+  .full-child {
+    width: 100%;
+    background-color: #e0e0e0;
+  }
   .child-container {
     display: flex;
-    background-color: #e0e0e0;
     padding: 30px;
-
+    max-width: $max-width;
+    margin: 0 auto;
     .left {
       max-width: 1080px;
       margin: 0 auto;

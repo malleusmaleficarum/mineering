@@ -1,7 +1,7 @@
 @import '../../app/var';
 
 .container {
-  max-width: $max-width;
+  width: 100%;
 
   .title-container {
     padding: 30px;
@@ -41,18 +41,24 @@
     }
   }
 
-  .content-container {
-    padding: 100px 30px;
-    margin-bottom: 100px;
-    border-radius: 10px;
+  .full-content {
+    width: 100%;
     margin-top: -10px;
+    background-color: rgb(10, 10, 10);
+    border-radius: 10px;
     overflow: hidden;
     position: relative;
     z-index: 2;
-    background-color: rgb(10, 10, 10);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    margin-bottom: 100px;
+  }
+  .content-container {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 100px 30px;
+
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   }
 }

@@ -85,18 +85,18 @@ const Header = () => {
             </li>
             <li>
               <Link
-                href={'/about'}
+                href={'/about-us'}
                 className={
-                  isLinkActive('/about') ? `${styles['active-link']}` : ''
+                  isLinkActive('/about-us') ? `${styles['active-link']}` : ''
                 }
               >
-                About
+                About Us
               </Link>
             </li>
             <li>
-              <Link href={'/services'}>
+              <Link href={'/products-and-services'}>
                 <p>
-                  Services{' '}
+                  Products and Services{' '}
                   <span>
                     <Image
                       className={styles.arrow}
@@ -110,30 +110,32 @@ const Header = () => {
               </Link>
               <ul className={styles['drop-down']}>
                 <li>
-                  <Link href={'/services/aims'}>
+                  <Link href={'/products-and-services/aims'}>
                     Asset Integrity Management System (AIMS)
                   </Link>
                 </li>
                 <li>
-                  <Link href={'/services/mining'}>
+                  <Link href={'/products-and-services/aims'}>
                     Mining Technology and Mineral Processing
                   </Link>
                 </li>
                 <li>
-                  <Link href={'/services/aims'}>Engineering Services</Link>
+                  <Link href={'/products-and-services/engineering-services'}>
+                    Engineering Services
+                  </Link>
                 </li>
                 <li>
-                  <Link href={'/services/aims'}>
+                  <Link href={'/products-and-services/aims'}>
                     Professional Development Programs
                   </Link>
                 </li>
                 <li>
-                  <Link href={'/services/aims'}>
+                  <Link href={'/products-and-services/aims'}>
                     Engineering Software Development
                   </Link>
                 </li>
                 <li>
-                  <Link href={'/services/aims'}>
+                  <Link href={'/products-and-services/aims'}>
                     Geothermal, Coal and Hydropower Plant
                   </Link>
                 </li>
@@ -141,13 +143,13 @@ const Header = () => {
             </li>
             <li>
               <Link
-                href={'/media'}
+                href={'/projects-and-resources'}
                 className={
                   isLinkActive('/news') ? `${styles['active-link']}` : ''
                 }
               >
                 <p>
-                  Media{' '}
+                  Projects and Resources{' '}
                   <span>
                     <Image
                       className={styles.arrow}
@@ -161,18 +163,28 @@ const Header = () => {
               </Link>
               <ul className={styles['drop-down']}>
                 <li>
-                  <Link href={'/media'}>Previous Projects</Link>
+                  <Link href={'/projects-and-resources'}>
+                    Previous Projects
+                  </Link>
                 </li>
                 <li>
-                  <Link href={'/media'}>News</Link>
+                  <Link href={'/projects-and-resources'}>
+                    Whitepaper and Presentations
+                  </Link>
                 </li>
                 <li>
-                  <Link href={'/media'}>Resources</Link>
+                  <Link href={'/projects-and-resources'}>Brochures</Link>
+                </li>
+                <li>
+                  <Link href={'/projects-and-resources'}>News</Link>
+                </li>
+                <li>
+                  <Link href={'/projects-and-resources'}>Glosarry</Link>
                 </li>
               </ul>
             </li>
             <li>
-              <Link href={'/contact'}>Contact</Link>
+              <Link href={'/contact-us'}>Contact Us</Link>
             </li>
           </ul>
         </div>

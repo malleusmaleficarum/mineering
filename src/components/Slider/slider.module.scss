@@ -1,48 +1,52 @@
 @import '../../app/var';
 
-.container {
-  padding: 30px;
-  max-width: $max-width;
+.full {
+  width: 100%;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  margin-top: -10px;
   background-color: #ebebeb;
-  padding-bottom: 50px;
-  .header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: $gap;
+  .container {
+    padding: 30px;
+    max-width: $max-width;
+    margin: 0 auto;
+    margin-top: -10px;
+    padding-bottom: 50px;
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: $gap;
 
-    h1 {
-      font-size: 32px;
-      font-weight: 700;
-    }
+      h1 {
+        font-size: 32px;
+        font-weight: 700;
+      }
 
-    a {
-      display: inline-block;
-      background-color: #f0f0f0;
-      color: $primary-color;
-      padding: 12px 28px;
-      border-radius: 20px;
-      border: 1px solid $primary-color;
-      text-decoration: none;
-      text-transform: capitalize;
-      font-size: 14px;
-      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),
-        0 2px 4px -2px rgb(0 0 0 / 0.1);
-      transition: all 0.2s ease-in-out;
+      a {
+        display: inline-block;
+        background-color: #f0f0f0;
+        color: $primary-color;
+        padding: 12px 28px;
+        border-radius: 20px;
+        border: 1px solid $primary-color;
+        text-decoration: none;
+        text-transform: capitalize;
+        font-size: 14px;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),
+          0 2px 4px -2px rgb(0 0 0 / 0.1);
+        transition: all 0.2s ease-in-out;
 
-      &:hover {
-        background-color: $primary-color;
-        color: #f0f0f0;
+        &:hover {
+          background-color: $primary-color;
+          color: #f0f0f0;
+        }
       }
     }
-  }
 
-  // .card-container {
-  //   display: flex;
-  //   align-items: center;
-  //   flex-wrap: wrap;
-  // }
+    // .card-container {
+    //   display: flex;
+    //   align-items: center;
+    //   flex-wrap: wrap;
+    // }
+  }
 }

@@ -5,7 +5,7 @@ import MediaCard from '@/components/mediaCard/MediaCard';
 import Title from '@/components/Title/Title';
 
 export const metadata = {
-  title: 'Media | Mineering',
+  title: 'Projects and Resources | Mineering',
   description: '',
 };
 
@@ -15,7 +15,7 @@ const Media = () => {
   return (
     <div className={styles.container}>
       {/* {data} */}
-      <Title title={'Media'} />
+      <Title title={'Projects and Resources'} />
       <div className={styles['content-container']}>
         <h1 className={styles.title}>Resources</h1>
         <MediaCard />

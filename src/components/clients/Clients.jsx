@@ -42,36 +42,38 @@ const Clients = () => {
   }, []);
 
   return (
-    <div className={styles.container}>
-      <h1>Clients</h1>
-      {/* Client wrapper */}
+    <div className={styles.full}>
+      <div className={styles.container}>
+        <h1>Clients</h1>
+        {/* Client wrapper */}
 
-      {/* <div className={styles['image-container']}>
+        {/* <div className={styles['image-container']}>
         <Image src={clients[0].src} alt='' priority fill />
       </div> */}
 
-      {clientReady && (
-        <Swiper
-          modules={[Autoplay]}
-          slidesPerView={4}
-          spaceBetween={10}
-          centeredSlides={true}
-          loop={true}
-          autoplay={{ delay: 3000, pauseOnMouseEnter: true }}
-          breakpoints={{
-            640: { slidesPerView: 4 },
-            768: { slidesPerView: 4 },
-          }}
-        >
-          {clients.map((c, i) => (
-            <SwiperSlide key={i}>
-              <div className={styles['image-container']}>
-                <Image src={c.src} alt='' priority fill />
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      )}
+        {clientReady && (
+          <Swiper
+            modules={[Autoplay]}
+            slidesPerView={4}
+            spaceBetween={10}
+            centeredSlides={true}
+            loop={true}
+            autoplay={{ delay: 3000, pauseOnMouseEnter: true }}
+            breakpoints={{
+              640: { slidesPerView: 4 },
+              768: { slidesPerView: 4 },
+            }}
+          >
+            {clients.map((c, i) => (
+              <SwiperSlide key={i}>
+                <div className={styles['image-container']}>
+                  <Image src={c.src} alt='' priority fill />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        )}
+      </div>
     </div>
   );
 };

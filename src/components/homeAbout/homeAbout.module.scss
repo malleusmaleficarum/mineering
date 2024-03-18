@@ -1,12 +1,17 @@
-.container {
-  max-width: 1440px;
-  padding: 30px;
+.full {
+  width: 100%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   background-color: white;
   position: relative;
   top: -20px;
   z-index: 3;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 30px;
 
   .content {
     max-width: 60%;

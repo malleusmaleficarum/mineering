@@ -61,7 +61,7 @@ const DetailProduct = ({ params }) => {
       </div>
 
       {child && (
-        <>
+        <div className={styles['full-child']}>
           {/* CONTENT CHILD */}
           <div className={styles['child-container']}>
             <div className={styles.left}>
@@ -147,7 +147,7 @@ const DetailProduct = ({ params }) => {
               </p>
             </div>
           </div>
-        </>
+        </div>
       )}
     </div>
   );

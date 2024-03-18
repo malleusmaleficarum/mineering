@@ -4,7 +4,7 @@ import Title from '@/components/Title/Title';
 import ServiceCard from '@/components/homeService/ServiceCard';
 
 export const metadata = {
-  title: 'Services | Mineering',
+  title: 'Products and Services | Mineering',
   description: '',
 };
 
@@ -27,7 +27,7 @@ const Products = () => {
       {/* ----------------------- */}
       {/* ----------------------- */}
 
-      <Title title={'Services'} />
+      <Title title={'Products and Services'} />
       <div className={styles['title-container']}>
         <h1>
           Tides of Expertise, <br />
@@ -43,28 +43,33 @@ const Products = () => {
           culpa qui officia deserunt mollit anim id est laborum
         </p>
       </div>
-      <div className={styles['content-container']}>
-        <ServiceCard
-          title={'Asset Integrity Management System (AIMS)'}
-          link={'/services/aims'}
-        />
-        <ServiceCard
-          title={'Mining Technology and Mineral Processing'}
-          link={'/services/mining'}
-        />
-        <ServiceCard title={'Engineering Services'} link={'/services/aims'} />
-        <ServiceCard
-          title={'Professional Development Programs'}
-          link={'/services/aims'}
-        />
-        <ServiceCard
-          title={'Engineering Software Development'}
-          link={'/services/aims'}
-        />
-        <ServiceCard
-          title={'Geothermal, Coal, and Hydropower Plant'}
-          link={'/services/aims'}
-        />
+      <div className={styles['full-content']}>
+        <div className={styles['content-container']}>
+          <ServiceCard
+            title={'Asset Integrity Management System (AIMS)'}
+            link={'/products-and-services/aims'}
+          />
+          <ServiceCard
+            title={'Mining Technology and Mineral Processing'}
+            link={'/products-and-services/aims'}
+          />
+          <ServiceCard
+            title={'Engineering Services'}
+            link={'/products-and-services/engineering-services'}
+          />
+          <ServiceCard
+            title={'Professional Development Programs'}
+            link={'/products-and-services/aims'}
+          />
+          <ServiceCard
+            title={'Engineering Software Development'}
+            link={'/products-and-services/aims'}
+          />
+          <ServiceCard
+            title={'Geothermal, Coal, and Hydropower Plant'}
+            link={'/products-and-services/aims'}
+          />
+        </div>
       </div>
     </div>
   );

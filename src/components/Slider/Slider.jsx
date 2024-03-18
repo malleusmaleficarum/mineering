@@ -15,36 +15,38 @@ const Slider = () => {
   }, []);
 
   return (
-    <div className={styles.container}>
-      <div className={styles['header-container']}>
-        <h1>Media</h1>
-        <Link href={'/media'}>See More</Link>
-      </div>
-      {ready && (
-        <div className={styles['card-container']}>
-          <Swiper
-            slidesPerView={1.2}
-            spaceBetween={10}
-            breakpoints={{
-              640: { slidesPerView: 2.2 },
-              768: { slidesPerView: 3.2 },
-            }}
-          >
-            <SwiperSlide>
-              <SliderCard />
-            </SwiperSlide>
-            <SwiperSlide>
-              <SliderCard />
-            </SwiperSlide>
-            <SwiperSlide>
-              <SliderCard />
-            </SwiperSlide>
-            <SwiperSlide>
-              <SliderCard />
-            </SwiperSlide>
-          </Swiper>
+    <div className={styles.full}>
+      <div className={styles.container}>
+        <div className={styles['header-container']}>
+          <h1>Projects and Resources</h1>
+          <Link href={'/projects-and-resources'}>See More</Link>
         </div>
-      )}
+        {ready && (
+          <div className={styles['card-container']}>
+            <Swiper
+              slidesPerView={1.2}
+              spaceBetween={10}
+              breakpoints={{
+                640: { slidesPerView: 2.2 },
+                768: { slidesPerView: 3.2 },
+              }}
+            >
+              <SwiperSlide>
+                <SliderCard />
+              </SwiperSlide>
+              <SwiperSlide>
+                <SliderCard />
+              </SwiperSlide>
+              <SwiperSlide>
+                <SliderCard />
+              </SwiperSlide>
+              <SwiperSlide>
+                <SliderCard />
+              </SwiperSlide>
+            </Swiper>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

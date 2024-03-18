@@ -1,7 +1,11 @@
 @import '../../app/var';
 
+.full {
+  width: 100%;
+}
+
 .container {
-  max-width: $max-width;
+  margin: 0 auto;
   position: relative;
   margin-top: -10px;
   margin-bottom: -10px;

@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const SliderCard = () => {
   return (
-    <Link href={'#'} className={styles.container}>
+    <Link href={'/projects-and-resources/testing'} className={styles.container}>
       {/* Image */}
       <div className={styles['img-container']}>
         <Image src={'/images/media.png'} fill priority />
@@ -16,7 +16,7 @@ const SliderCard = () => {
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis
       </p>
-      <Link href={'#'}>Read More</Link>
+      <Link href={'/projects-and-resources/testing'}>Read More</Link>
     </Link>
   );
 };

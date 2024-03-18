@@ -5,7 +5,7 @@ import Link from 'next/link';
 const MediaCard = () => {
   return (
     <Link
-      href={'/media/gain-strategic-insights-from'}
+      href={'/projects-and-resources/gain-strategic-insights-from'}
       className={styles['card-container']}
     >
       {/* Image */}

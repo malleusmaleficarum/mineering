@@ -2,7 +2,7 @@ import Image from 'next/image';
 import styles from './page.module.scss';
 
 export const metadata = {
-  title: 'Contact | Mineering',
+  title: 'Contact Us| Mineering',
   description: '',
 };
 
@@ -17,7 +17,7 @@ const Contact = () => {
         {/* overlay */}
         <div className={styles.overlay} />
         {/* title */}
-        <h1 className={styles.title}>Contact</h1>
+        <h1 className={styles.title}>Contact Us</h1>
       </div>
       <div className={styles['content-container']}>
         <p className={styles.subheading}>
