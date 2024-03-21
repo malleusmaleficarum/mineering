@@ -12,10 +12,13 @@ import {
 } from 'framer';
 import Image from 'next/image';
 import Breadcrumb from './Breadcrumb';
+import Arrow from '../../../public/images/chevron-down.svg?svgr';
 
 const Header = () => {
   const [isActive, setIsActive] = useState(false);
   const [breadcrumbData, setBreadCrumbData] = useState([]);
+  const [childMenu1, setChildMenu1] = useState(false);
+  const [childMenu2, setChildMenu2] = useState(false);
   const pathname = usePathname();
   const path = pathname.split('/').filter((path) => path);
   path.unshift('home');
@@ -45,6 +48,8 @@ const Header = () => {
 
   const handleClick = () => {
     setIsActive(!isActive);
+    setChildMenu1(false);
+    setChildMenu2(false);
   };
 
   const scrollToTop = () => {
@@ -98,13 +103,7 @@ const Header = () => {
                 <p>
                   Products and Services{' '}
                   <span>
-                    <Image
-                      className={styles.arrow}
-                      src={'/images/arrow.png'}
-                      width={10}
-                      height={10}
-                      priority
-                    />
+                    <Arrow style={{ fill: 'black' }} />
                   </span>
                 </p>
               </Link>
@@ -151,13 +150,7 @@ const Header = () => {
                 <p>
                   Projects and Resources{' '}
                   <span>
-                    <Image
-                      className={styles.arrow}
-                      src={'/images/arrow.png'}
-                      width={10}
-                      height={10}
-                      priority
-                    />
+                    <Arrow style={{ fill: 'black' }} />
                   </span>
                 </p>
               </Link>
@@ -189,7 +182,23 @@ const Header = () => {
           </ul>
         </div>
         <div className={styles.sm}>
-          <button onClick={handleClick}>{isActive ? 'x' : '='}</button>
+          <button onClick={handleClick}>
+            {isActive ? (
+              <Image
+                src={'/images/close-icon.png'}
+                alt='close'
+                width={15}
+                height={15}
+              />
+            ) : (
+              <Image
+                src={'/images/hamburger-icon.png'}
+                alt='close'
+                width={15}
+                height={15}
+              />
+            )}
+          </button>
         </div>
         {/* MOBILE */}
         <AnimatePresence>
@@ -214,22 +223,103 @@ const Header = () => {
                 </li>
                 <li>
                   <motion.div variants={mobileLinkVars}>
-                    <Link href={'/about'}>About</Link>
+                    <Link href={'/about-us'}>About Us</Link>
                   </motion.div>
                 </li>
                 <li>
                   <motion.div variants={mobileLinkVars}>
-                    <Link href={'#'}>Services</Link>
+                    <button
+                      className={styles.button}
+                      onClick={() => setChildMenu1(!childMenu1)}
+                    >
+                      <p>
+                        Products and Services{' '}
+                        <span>
+                          <Arrow style={{ fill: '#f0f0f0' }} />
+                        </span>
+                      </p>
+                    </button>
+                    {childMenu1 && (
+                      <ul className={styles.child}>
+                        <li>
+                          <Link href={'/products-and-services/aims'}>
+                            Asset Integrity Management System (AIMS)
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href={'/products-and-services/aims'}>
+                            Mining Technology and Mineral Processing
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href={'/products-and-services/engineering-services'}
+                          >
+                            Engineering Services
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href={'/products-and-services/aims'}>
+                            Professional Development Programs
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href={'/products-and-services/aims'}>
+                            Engineering Software Development
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href={'/products-and-services/aims'}>
+                            Geothermal, Coal and Hydropower Plant
+                          </Link>
+                        </li>
+                      </ul>
+                    )}
                   </motion.div>
                 </li>
                 <li>
                   <motion.div variants={mobileLinkVars}>
-                    <Link href={'/news'}>News</Link>
+                    <button
+                      className={styles.button}
+                      onClick={() => setChildMenu2(!childMenu2)}
+                    >
+                      <p>
+                        Projects and Resources{' '}
+                        <span>
+                          <Arrow style={{ fill: '#f0f0f0' }} />
+                        </span>
+                      </p>
+                    </button>
+                    {childMenu2 && (
+                      <ul className={styles.child}>
+                        <li>
+                          <Link href={'/projects-and-resources'}>
+                            Previous Projects
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href={'/projects-and-resources'}>
+                            Whitepaper and Presentations
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href={'/projects-and-resources'}>
+                            Brochures
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href={'/projects-and-resources'}>News</Link>
+                        </li>
+                        <li>
+                          <Link href={'/projects-and-resources'}>Glosarry</Link>
+                        </li>
+                      </ul>
+                    )}
                   </motion.div>
                 </li>
                 <li>
                   <motion.div variants={mobileLinkVars}>
-                    <Link href={'#'}>Contact</Link>
+                    <Link href={'/contact-us'}>Contact Us</Link>
                   </motion.div>
                 </li>
               </motion.ul>
