@@ -4,7 +4,7 @@ import Title from '@/components/Title/Title';
 import ServiceCard from '@/components/homeService/ServiceCard';
 
 export const metadata = {
-  title: 'Products and Services | Mineering',
+  title: 'Products and Services',
   description: '',
 };
 

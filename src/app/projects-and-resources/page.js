@@ -5,7 +5,7 @@ import MediaCard from '@/components/mediaCard/MediaCard';
 import Title from '@/components/Title/Title';
 
 export const metadata = {
-  title: 'Projects and Resources | Mineering',
+  title: 'Projects and Resources',
   description: '',
 };
 

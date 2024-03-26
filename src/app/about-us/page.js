@@ -3,7 +3,7 @@ import styles from './page.module.scss';
 import Image from 'next/image';
 
 export const metadata = {
-  title: 'About | Mineering',
+  title: 'About Us',
   description: '',
 };
 

@@ -2,9 +2,7 @@
 
 .container {
   width: 100%;
-
   overflow: hidden;
-
   margin-bottom: 100px;
 
   .title-container {
@@ -43,9 +41,8 @@
     }
   }
 
-  .content-container {
-    max-width: $max-width;
-    margin: 0 auto;
+  .full-content {
+    width: 100%;
     padding: 30px;
     margin-top: -10px;
     border-top-left-radius: 10px;
@@ -54,59 +51,64 @@
     position: relative;
     z-index: 2;
 
-    .subheading {
-      text-align: center;
-      margin-bottom: 30px;
-      font-weight: 300;
-      margin-bottom: 100px;
-      line-height: 1.5;
-    }
-
-    .grid {
-      width: 80%;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 50px;
+    .content-container {
+      max-width: $max-width;
       margin: 0 auto;
-      .contact {
-        .address {
-          display: flex;
-          flex-direction: column;
-          gap: 15px;
-          margin-bottom: 50px;
-          h2 {
-            font-size: 18px;
-            font-weight: 700;
-            color: $primary-color;
-            text-transform: uppercase;
-          }
 
-          p {
-            font-size: 16px;
-            font-weight: 300;
-            line-height: 1.5;
-          }
-        }
-        .info {
-          display: flex;
-          flex-direction: column;
-          gap: 15px;
-          h2 {
-            font-size: 18px;
-            font-weight: 700;
-            color: $primary-color;
-            text-transform: uppercase;
-          }
+      .subheading {
+        text-align: center;
+        margin-bottom: 30px;
+        font-weight: 300;
+        margin-bottom: 100px;
+        line-height: 1.5;
+      }
 
-          .info-detail {
+      .grid {
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+        margin: 0 auto;
+        .contact {
+          .address {
             display: flex;
-            display: flex;
-            align-items: center;
-            gap: 30px;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 50px;
+            h2 {
+              font-size: 18px;
+              font-weight: 700;
+              color: $primary-color;
+              text-transform: uppercase;
+            }
 
             p {
               font-size: 16px;
               font-weight: 300;
+              line-height: 1.5;
+            }
+          }
+          .info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            h2 {
+              font-size: 18px;
+              font-weight: 700;
+              color: $primary-color;
+              text-transform: uppercase;
+            }
+
+            .info-detail {
+              display: flex;
+              display: flex;
+              align-items: center;
+              gap: 30px;
+
+              p {
+                font-size: 16px;
+                font-weight: 300;
+              }
             }
           }
         }
