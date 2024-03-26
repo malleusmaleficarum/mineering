@@ -192,16 +192,19 @@
             text-decoration: none;
             color: #f0f0f0;
             font-size: 14px;
+            font-weight: 300;
           }
           .button {
             background-color: transparent;
             outline: none;
             border: none;
+            cursor: pointer;
+            font-family: inherit;
 
             p {
               color: #f0f0f0;
               font-size: 14px;
-              font-weight: 200;
+              font-weight: 300;
             }
 
             span {
