@@ -130,12 +130,17 @@ const Header = () => {
                 </li>
                 <li>
                   <Link href={'/products-and-services/aims'}>
-                    Engineering Software Development
+                    Engineering Software
                   </Link>
                 </li>
                 <li>
                   <Link href={'/products-and-services/aims'}>
-                    Geothermal, Coal and Hydropower Plant
+                    Energy Infrastructures
+                  </Link>
+                </li>
+                <li>
+                  <Link href={'/products-and-services/aims'}>
+                    Technology Development
                   </Link>
                 </li>
               </ul>
@@ -265,12 +270,17 @@ const Header = () => {
                         </li>
                         <li>
                           <Link href={'/products-and-services/aims'}>
-                            Engineering Software Development
+                            Engineering Software
                           </Link>
                         </li>
                         <li>
                           <Link href={'/products-and-services/aims'}>
-                            Geothermal, Coal and Hydropower Plant
+                            Energy Infrastructures
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href={'/products-and-services/aims'}>
+                            Technology Development
                           </Link>
                         </li>
                       </ul>

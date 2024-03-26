@@ -62,11 +62,15 @@ const Products = () => {
             link={'/products-and-services/aims'}
           />
           <ServiceCard
-            title={'Engineering Software Development'}
+            title={'Engineering Software'}
             link={'/products-and-services/aims'}
           />
           <ServiceCard
-            title={'Geothermal, Coal, and Hydropower Plant'}
+            title={'Energy Infrastructures'}
+            link={'/products-and-services/aims'}
+          />
+          <ServiceCard
+            title={'Technology Development'}
             link={'/products-and-services/aims'}
           />
         </div>

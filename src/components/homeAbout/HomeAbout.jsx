@@ -5,6 +5,10 @@ const HomeAbout = () => {
     <div className={styles.full}>
       <div className={styles.container}>
         <div className={styles.content}>
+          <h1>
+            Lorem ipsum <br />
+            Dolor sit amet consectetur
+          </h1>
           <p>
             &quot;Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Expedita quae cupiditate, unde cumque aspernatur maxime dolor
