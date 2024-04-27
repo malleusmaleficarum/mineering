@@ -29,18 +29,16 @@ const Products = () => {
 
       <Title title={'Products and Services'} />
       <div className={styles['title-container']}>
-        <h1>
+        {/* <h1>
           Tides of Expertise, <br />
           Waves of Progress
-        </h1>
+        </h1> */}
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum
+          Every project is a unique voyage, We leverage our deep expertise in
+          energy industry to guide you through complex challenges and deliver
+          cost-effective solutions. Our seasoned engineers, professionals and
+          consultants serve clients in both energy and mining industries through
+          our seven main competencies below.
         </p>
       </div>
       <div className={styles['full-content']}>
@@ -50,7 +48,7 @@ const Products = () => {
             link={'/products-and-services/aims'}
           />
           <ServiceCard
-            title={'Mining Technology and Mineral Processing'}
+            title={'Mineral Technology and Business'}
             link={'/products-and-services/aims'}
           />
           <ServiceCard
@@ -66,7 +64,7 @@ const Products = () => {
             link={'/products-and-services/aims'}
           />
           <ServiceCard
-            title={'Energy Infrastructures'}
+            title={'Marginal Field Solution'}
             link={'/products-and-services/aims'}
           />
           <ServiceCard

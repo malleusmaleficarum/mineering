@@ -63,52 +63,52 @@
         line-height: 1.5;
       }
 
-      .grid {
-        width: 80%;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 50px;
+      .contact {
+        width: 50%;
         margin: 0 auto;
-        .contact {
-          .address {
+
+        @media only screen and (max-width: 800px) {
+          width: 100%;
+        }
+
+        .address {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          margin-bottom: 50px;
+          h2 {
+            font-size: 18px;
+            font-weight: 700;
+            color: $primary-color;
+            text-transform: uppercase;
+          }
+
+          p {
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 1.5;
+          }
+        }
+        .info {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          h2 {
+            font-size: 18px;
+            font-weight: 700;
+            color: $primary-color;
+            text-transform: uppercase;
+          }
+
+          .info-detail {
             display: flex;
-            flex-direction: column;
-            gap: 15px;
-            margin-bottom: 50px;
-            h2 {
-              font-size: 18px;
-              font-weight: 700;
-              color: $primary-color;
-              text-transform: uppercase;
-            }
+            display: flex;
+            align-items: center;
+            gap: 30px;
 
             p {
               font-size: 16px;
               font-weight: 300;
-              line-height: 1.5;
-            }
-          }
-          .info {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            h2 {
-              font-size: 18px;
-              font-weight: 700;
-              color: $primary-color;
-              text-transform: uppercase;
-            }
-
-            .info-detail {
-              display: flex;
-              display: flex;
-              align-items: center;
-              gap: 30px;
-
-              p {
-                font-size: 16px;
-                font-weight: 300;
-              }
             }
           }
         }

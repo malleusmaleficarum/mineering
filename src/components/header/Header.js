@@ -115,7 +115,7 @@ const Header = () => {
                 </li>
                 <li>
                   <Link href={'/products-and-services/aims'}>
-                    Mining Technology and Mineral Processing
+                    Mineral Technology and Business
                   </Link>
                 </li>
                 <li>
@@ -135,7 +135,7 @@ const Header = () => {
                 </li>
                 <li>
                   <Link href={'/products-and-services/aims'}>
-                    Energy Infrastructures
+                    Marginal Field Solution
                   </Link>
                 </li>
                 <li>
@@ -253,7 +253,7 @@ const Header = () => {
                         </li>
                         <li>
                           <Link href={'/products-and-services/aims'}>
-                            Mining Technology and Mineral Processing
+                            Mineral Technology and Business
                           </Link>
                         </li>
                         <li>
@@ -275,7 +275,7 @@ const Header = () => {
                         </li>
                         <li>
                           <Link href={'/products-and-services/aims'}>
-                            Energy Infrastructures
+                            Marginal Field Solution
                           </Link>
                         </li>
                         <li>

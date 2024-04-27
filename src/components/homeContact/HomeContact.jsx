@@ -10,10 +10,11 @@ const HomeContact = () => {
       </div>
       {/* content */}
       <div className={styles['content-container']}>
-        <h1>Let&apos;s collaborate together!</h1>
+        <h1>Let&apos;s Build Tomorrow, Today</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.{' '}
+          Reach out to us today to explore how our expertise can fuel your
+          success. Together, let&apos;s build a sustainable and innovative
+          future.{' '}
         </p>
         <Link href={'/contact-us'}>Contact Us</Link>
       </div>

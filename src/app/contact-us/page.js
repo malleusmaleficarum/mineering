@@ -22,70 +22,38 @@ const Contact = () => {
       <div className={styles['full-content']}>
         <div className={styles['content-container']}>
           <p className={styles.subheading}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            <br /> sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad
+            Ready to unlock your full potential? <br />
+            Contact Petroneering today to discuss how our expertise can fuel
+            your success.
           </p>
           {/* grid */}
-          <div className={styles.grid}>
-            <div className={styles.contact}>
-              <div className={styles.address}>
-                <h2>Office 1</h2>
-                <p>
-                  Jl. Kemang, Bangka, Kecamatan Mampang Prapatan, Kota Jakarta
-                  Selatan, DKI Jakarta
-                </p>
-              </div>
-              <div className={styles.info}>
-                <h2>Info 1</h2>
-                <div className={styles['info-detail']}>
-                  <Image
-                    src={'/images/phone.png'}
-                    width={15}
-                    height={15}
-                    priority
-                  />
-                  <p>0811-1111-1111</p>
-                </div>
-                <div className={styles['info-detail']}>
-                  <Image
-                    src={'/images/email.png'}
-                    width={15}
-                    height={15}
-                    priority
-                  />
-                  <p>mineering@gmail.com</p>
-                </div>
-              </div>
+          <div className={styles.contact}>
+            <div className={styles.address}>
+              <h2>Office Address</h2>
+              <p>
+                Menara Kuningan Lantai 31 Unit A Jl. H.R. Rasuna Said Blok X/7
+                Kav.5, Karet Kuningan, Setiabudi, Jakarta Selatan, Jakarta 12940
+              </p>
             </div>
-            <div className={styles.contact}>
-              <div className={styles.address}>
-                <h2>Office 2</h2>
-                <p>
-                  Jl. Kemang, Bangka, Kecamatan Mampang Prapatan, Kota Jakarta
-                  Selatan, DKI Jakarta
-                </p>
+            <div className={styles.info}>
+              <h2>Info</h2>
+              <div className={styles['info-detail']}>
+                <Image
+                  src={'/images/phone.png'}
+                  width={15}
+                  height={15}
+                  priority
+                />
+                <p>+62 2121684146</p>
               </div>
-              <div className={styles.info}>
-                <h2>Info 2</h2>
-                <div className={styles['info-detail']}>
-                  <Image
-                    src={'/images/phone.png'}
-                    width={15}
-                    height={15}
-                    priority
-                  />
-                  <p>0811-1111-1111</p>
-                </div>
-                <div className={styles['info-detail']}>
-                  <Image
-                    src={'/images/email.png'}
-                    width={15}
-                    height={15}
-                    priority
-                  />
-                  <p>mineering@gmail.com</p>
-                </div>
+              <div className={styles['info-detail']}>
+                <Image
+                  src={'/images/email.png'}
+                  width={15}
+                  height={15}
+                  priority
+                />
+                <p>general.admin@mineeringenergi.com </p>
               </div>
             </div>
           </div>

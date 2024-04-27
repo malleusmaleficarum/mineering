@@ -17,7 +17,7 @@ const HomeService = () => {
             link={'/products-and-services/aims'}
           />
           <ServiceCard
-            title={'Mining Technology and Mineral Processing'}
+            title={'Mineral Technology and Business'}
             link={'/products-and-services/aims'}
           />
           <ServiceCard
