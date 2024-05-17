@@ -17,17 +17,17 @@ const HomeService = () => {
             link={
               '/products-and-services/asset-integrity-management-system-aims'
             }
-            image={`http://localhost/restapi/wp-content/uploads/2024/04/aims.jpeg`}
+            image={`/images/aims.jpeg`}
           />
           <ServiceCard
             title={'Mineral Technology and Business'}
             link={'/products-and-services/mineral-technology-and-business'}
-            image={`http://localhost/restapi/wp-content/uploads/2024/04/mineral-3.jpg`}
+            image={`/images/mineral-3.jpg`}
           />
           <ServiceCard
             title={'Engineering Services'}
             link={'/products-and-services/engineering-services'}
-            image={`http://localhost/restapi/wp-content/uploads/2024/04/engineering-services-1.jpeg`}
+            image={`/images/engineering-services-1.jpeg`}
           />
         </div>
       </div>
