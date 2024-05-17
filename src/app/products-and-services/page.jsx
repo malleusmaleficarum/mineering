@@ -8,12 +8,12 @@ export const metadata = {
   description: '',
 };
 
-const Products = () => {
-  // const response = await fetch(
-  //   `${process.env.NEXT_PUBLIC_API_URL}/services?acf_format=standard&_fields=id,slug,title,acf,modified`,
-  //   { next: { revalidate: 3600 } }
-  // );
-  // const data = await response.json();
+const Products = async () => {
+  const response = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/product?acf_format=standard&_fields=id,slug,title,acf,modified&orderby=title&order=asc`,
+    { next: { revalidate: 1 } }
+  );
+  const data = await response.json();
 
   return (
     <div className={styles.container}>
@@ -29,10 +29,6 @@ const Products = () => {
 
       <Title title={'Products and Services'} />
       <div className={styles['title-container']}>
-        {/* <h1>
-          Tides of Expertise, <br />
-          Waves of Progress
-        </h1> */}
         <p>
           Every project is a unique voyage, We leverage our deep expertise in
           energy industry to guide you through complex challenges and deliver
@@ -43,34 +39,18 @@ const Products = () => {
       </div>
       <div className={styles['full-content']}>
         <div className={styles['content-container']}>
-          <ServiceCard
+          {data.map((data, i) => (
+            <ServiceCard
+              key={i}
+              title={data.title.rendered}
+              link={`/products-and-services/${data.slug}`}
+              // image={data.acf['featured-image']}
+            />
+          ))}
+          {/* <ServiceCard
             title={'Asset Integrity Management System (AIMS)'}
             link={'/products-and-services/aims'}
-          />
-          <ServiceCard
-            title={'Mineral Technology and Business'}
-            link={'/products-and-services/aims'}
-          />
-          <ServiceCard
-            title={'Engineering Services'}
-            link={'/products-and-services/engineering-services'}
-          />
-          <ServiceCard
-            title={'Professional Development Programs'}
-            link={'/products-and-services/aims'}
-          />
-          <ServiceCard
-            title={'Engineering Software'}
-            link={'/products-and-services/aims'}
-          />
-          <ServiceCard
-            title={'Marginal Field Solution'}
-            link={'/products-and-services/aims'}
-          />
-          <ServiceCard
-            title={'Technology Development'}
-            link={'/products-and-services/aims'}
-          />
+          />] */}
         </div>
       </div>
     </div>

@@ -14,6 +14,10 @@
     background-color: rgba(0, 0, 0, 0.05);
   }
 
+  @media only screen and (max-width: 800px) {
+    flex-direction: column;
+  }
+
   .left {
     overflow: hidden;
     border-radius: 10px;
@@ -44,14 +48,18 @@
         color: $primary-color;
         font-size: 22px;
         text-transform: uppercase;
-        font-weight: 600;
+        font-weight: 700;
+
+        @media only screen and (max-width: 800px) {
+          font-size: 18px;
+        }
       }
 
       h2 {
-        font-size: 16px;
-        font-weight: 700;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.2;
         opacity: 0.5;
-        text-transform: uppercase;
       }
 
       h3 {

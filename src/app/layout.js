@@ -12,9 +12,6 @@ const dmSans = DM_Sans({
 export const metadata = {
   title: { default: 'Mineering', template: '%s | Mineering' },
   description: '',
-  twitter: {
-    card: 'summary_large_image',
-  },
 };
 
 export default function RootLayout({ children }) {

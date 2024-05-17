@@ -43,6 +43,7 @@ const Contact = () => {
                   width={15}
                   height={15}
                   priority
+                  alt=''
                 />
                 <p>+62 2121684146</p>
               </div>
@@ -52,6 +53,7 @@ const Contact = () => {
                   width={15}
                   height={15}
                   priority
+                  alt=''
                 />
                 <p>general.admin@mineeringenergi.com </p>
               </div>

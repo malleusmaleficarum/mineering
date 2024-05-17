@@ -19,6 +19,8 @@ const Header = () => {
   const [breadcrumbData, setBreadCrumbData] = useState([]);
   const [childMenu1, setChildMenu1] = useState(false);
   const [childMenu2, setChildMenu2] = useState(false);
+  const [productSubMenu, setProductSubMenu] = useState([]);
+  const [projectSubMenu, setProjectSubMenu] = useState([]);
   const pathname = usePathname();
   const path = pathname.split('/').filter((path) => path);
   path.unshift('home');
@@ -45,6 +47,28 @@ const Header = () => {
       ? (document.body.style.overflow = 'hidden')
       : (document.body.style.overflow = 'visible');
   }, [isActive]);
+
+  //API CALL
+  useEffect(() => {
+    callProduct();
+    callProject();
+  }, []);
+
+  const callProduct = async () => {
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_API_URL}/product?acf_format=standard&_fields=slug,title&orderby=title&order=asc`
+    );
+    const data = await response.json();
+    setProductSubMenu(data);
+  };
+
+  const callProject = async () => {
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_API_URL}/categories?&_fields=id,name`
+    );
+    const data = await response.json();
+    setProjectSubMenu(data);
+  };
 
   const handleClick = () => {
     setIsActive(!isActive);
@@ -108,41 +132,14 @@ const Header = () => {
                 </p>
               </Link>
               <ul className={styles['drop-down']}>
-                <li>
-                  <Link href={'/products-and-services/aims'}>
-                    Asset Integrity Management System (AIMS)
-                  </Link>
-                </li>
-                <li>
-                  <Link href={'/products-and-services/aims'}>
-                    Mineral Technology and Business
-                  </Link>
-                </li>
-                <li>
-                  <Link href={'/products-and-services/engineering-services'}>
-                    Engineering Services
-                  </Link>
-                </li>
-                <li>
-                  <Link href={'/products-and-services/aims'}>
-                    Professional Development Programs
-                  </Link>
-                </li>
-                <li>
-                  <Link href={'/products-and-services/aims'}>
-                    Engineering Software
-                  </Link>
-                </li>
-                <li>
-                  <Link href={'/products-and-services/aims'}>
-                    Marginal Field Solution
-                  </Link>
-                </li>
-                <li>
-                  <Link href={'/products-and-services/aims'}>
-                    Technology Development
-                  </Link>
-                </li>
+                {productSubMenu?.length > 0 &&
+                  productSubMenu.map((data, i) => (
+                    <li key={i}>
+                      <Link href={`/products-and-services/${data?.slug}`}>
+                        {data?.title?.rendered}
+                      </Link>
+                    </li>
+                  ))}
               </ul>
             </li>
             <li>
@@ -160,25 +157,19 @@ const Header = () => {
                 </p>
               </Link>
               <ul className={styles['drop-down']}>
-                <li>
-                  <Link href={'/projects-and-resources'}>
-                    Previous Projects
-                  </Link>
-                </li>
-                <li>
-                  <Link href={'/projects-and-resources'}>
-                    Whitepaper and Presentations
-                  </Link>
-                </li>
-                <li>
-                  <Link href={'/projects-and-resources'}>Brochures</Link>
-                </li>
-                <li>
-                  <Link href={'/projects-and-resources'}>News</Link>
-                </li>
-                <li>
-                  <Link href={'/projects-and-resources'}>Glosarry</Link>
-                </li>
+                {projectSubMenu?.length > 0 &&
+                  projectSubMenu.map(
+                    (data, i) =>
+                      data.id !== 1 && (
+                        <li key={data?.id}>
+                          <Link
+                            href={`/projects-and-resources?category=${data?.id}`}
+                          >
+                            {data?.name}
+                          </Link>
+                        </li>
+                      )
+                  )}
               </ul>
             </li>
             <li>
@@ -246,43 +237,16 @@ const Header = () => {
                     </button>
                     {childMenu1 && (
                       <ul className={styles.child}>
-                        <li>
-                          <Link href={'/products-and-services/aims'}>
-                            Asset Integrity Management System (AIMS)
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={'/products-and-services/aims'}>
-                            Mineral Technology and Business
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            href={'/products-and-services/engineering-services'}
-                          >
-                            Engineering Services
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={'/products-and-services/aims'}>
-                            Professional Development Programs
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={'/products-and-services/aims'}>
-                            Engineering Software
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={'/products-and-services/aims'}>
-                            Marginal Field Solution
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={'/products-and-services/aims'}>
-                            Technology Development
-                          </Link>
-                        </li>
+                        {productSubMenu?.length > 0 &&
+                          productSubMenu.map((data, i) => (
+                            <li key={i}>
+                              <Link
+                                href={`/products-and-services/${data?.slug}`}
+                              >
+                                {data?.title?.rendered}
+                              </Link>
+                            </li>
+                          ))}
                       </ul>
                     )}
                   </motion.div>
@@ -302,27 +266,19 @@ const Header = () => {
                     </button>
                     {childMenu2 && (
                       <ul className={styles.child}>
-                        <li>
-                          <Link href={'/projects-and-resources'}>
-                            Previous Projects
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={'/projects-and-resources'}>
-                            Whitepaper and Presentations
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={'/projects-and-resources'}>
-                            Brochures
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={'/projects-and-resources'}>News</Link>
-                        </li>
-                        <li>
-                          <Link href={'/projects-and-resources'}>Glosarry</Link>
-                        </li>
+                        {projectSubMenu?.length > 0 &&
+                          projectSubMenu.map(
+                            (data) =>
+                              data.id !== 1 && (
+                                <li key={data?.id}>
+                                  <Link
+                                    href={`/projects-and-resources?category=${data?.id}`}
+                                  >
+                                    {data?.name}
+                                  </Link>
+                                </li>
+                              )
+                          )}
                       </ul>
                     )}
                   </motion.div>

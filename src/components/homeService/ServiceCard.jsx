@@ -2,12 +2,12 @@ import Image from 'next/image';
 import styles from './serviceCard.module.scss';
 import Link from 'next/link';
 
-const ServiceCard = ({ link, title }) => {
+const ServiceCard = ({ link, title, image }) => {
   return (
     <Link href={link} className={styles.container}>
       {/* Image */}
       <div className={styles['image-container']}>
-        <Image src={'/images/service_1.png'} fill priority />
+        <Image src={image} fill priority alt='' />
       </div>
       {/* Overlay */}
       <div className={styles.overlay} />

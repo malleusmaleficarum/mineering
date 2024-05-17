@@ -1,30 +1,31 @@
 import Image from 'next/image';
 import styles from './mediaCard.module.scss';
 import Link from 'next/link';
+import { format } from 'date-fns';
+const MediaCard = ({ data, categories }) => {
+  const catName = categories.filter((cat) => cat.id === data.categories[0]);
 
-const MediaCard = () => {
   return (
     <Link
-      href={'/projects-and-resources/gain-strategic-insights-from'}
+      href={`/projects-and-resources/${data.slug}`}
       className={styles['card-container']}
     >
       {/* Image */}
       <div className={styles.left}>
         <div className={styles['image-container']}>
-          <Image src={'/images/media.png'} alt='' fill priority />
+          <Image src={data.fimg_url} alt='' fill priority />
         </div>
       </div>
       {/* Info */}
       <div className={styles['info-container']}>
         <div className={styles.top}>
-          <h1>
-            Gain strategic insights from deepwater oil and gas powerhouses
-          </h1>
-          <h2>Subheading Lorem Ipsum</h2>
-          <h3>Resource</h3>
+          <h1>{data.title.rendered}</h1>
+
+          <h2 dangerouslySetInnerHTML={{ __html: data.excerpt.rendered }}></h2>
+          <h3>{catName[0].name}</h3>
         </div>
         <div className={styles.bottom}>
-          <p>12 March 2023</p>
+          <p>{format(new Date(data.date), 'dd LLLL yyyy')}</p>
         </div>
       </div>
     </Link>

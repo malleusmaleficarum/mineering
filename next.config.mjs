@@ -9,7 +9,7 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'wptest.42web.io',
+        hostname: 'testingwprestapi.000webhostapp.com',
         port: '',
       },
     ],

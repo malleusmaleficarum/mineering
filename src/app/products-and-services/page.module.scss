@@ -39,6 +39,10 @@
       max-width: 980px;
       letter-spacing: 1.3px;
       line-height: 1.5;
+
+      @media only screen and (max-width: 800px) {
+        font-size: 14px;
+      }
     }
   }
 
@@ -57,9 +61,12 @@
     max-width: $max-width;
     margin: 0 auto;
     padding: 100px 30px;
-
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
+
+    @media only screen and (max-width: 800px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 }

@@ -11,27 +11,20 @@ import 'swiper/css/autoplay';
 
 const clients = [
   {
-    src: '/images/client-logo/emeco.png',
+    src: '/images/client-logo/pgnsaka.webp',
   },
 
   {
-    src: '/images/client-logo/jazeera.png',
+    src: '/images/client-logo/pln-enjiniring.png',
   },
   {
-    src: '/images/client-logo/mbcentury.png',
+    src: '/images/client-logo/s2p.png',
   },
   {
-    src: '/images/client-logo/prowell.png',
+    src: '/images/client-logo/pln-primer.png',
   },
   {
-    src: '/images/client-logo/psp.webp',
-  },
-
-  {
-    src: '/images/client-logo/timah.png',
-  },
-  {
-    src: '/images/client-logo/trakindo.jpeg',
+    src: '/images/client-logo/madam-energi.png',
   },
 ];
 
@@ -54,14 +47,14 @@ const Clients = () => {
         {clientReady && (
           <Swiper
             modules={[Autoplay]}
-            slidesPerView={4}
+            slidesPerView={3}
             spaceBetween={10}
             centeredSlides={true}
             loop={true}
             autoplay={{ delay: 3000, pauseOnMouseEnter: true }}
             breakpoints={{
-              640: { slidesPerView: 4 },
-              768: { slidesPerView: 4 },
+              640: { slidesPerView: 3 },
+              768: { slidesPerView: 3 },
             }}
           >
             {clients.map((c, i) => (

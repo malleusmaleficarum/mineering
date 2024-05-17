@@ -14,9 +14,29 @@ const About = () => {
 
       <div className={styles['content-container']}>
         <h1>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco
+          PT Mineering Energi International, a rapidly growing leader in
+          offshore technology development and consulting, is headquartered in
+          Jakarta, Indonesia. Our team boasts a proven track record of
+          navigating industry complexities, ensuring you benefit from extensive
+          experience.
+          <br />
+          <br />
+          We leverage our cutting-edge, patented technologies and deep industry
+          knowledge to empower oil and gas clients globally. Our team of
+          industry veterans and functional experts, armed with doctoral and
+          master&apos;s degrees from prestigious universities worldwide, offers
+          unparalleled access to functional expertise, a global network, and
+          seasoned guidance. This exceptional blend of credentials equips us to
+          tackle your toughest challenges with a comprehensive range of
+          integrated management and technical skills. We believe in lasting
+          impact, delivering practical recommendations that pave the way for a
+          more sustainable future.
+          <br />
+          <br />
+          We foster a collaborative spirit, working alongside you to unlock your
+          full potential within the industry. By enhancing your managerial
+          capabilities and leadership skills, we empower you to become active
+          participants and leaders in long-term collaborations.
         </h1>
       </div>
       <div className={styles['full-value']}>
@@ -26,11 +46,14 @@ const About = () => {
               <Image src={'/images/value.png'} alt='' priority fill />
             </div>
             <div className={styles.right}>
-              <h1>Company Vision</h1>
+              <h1>Company Mission</h1>
               <p>
-                We strive to help our clients make sustainable improvements in
-                their core businesses and build an enduring firm that attracts,
-                co-evolves and retains exceptional human capital.
+                At Mineering, we are committed to partnering with our clients to
+                achieve lasting success. We focus on delivering solutions that
+                drive long-term improvements in their core businesses, fostering
+                a sustainable and thriving future. We believe in building a
+                strong and enduring company that attracts, develops, and retains
+                exceptional human capital.
               </p>
             </div>
           </div>
@@ -49,6 +72,7 @@ const About = () => {
                   priority
                   width={20}
                   height={20}
+                  alt=''
                 />
                 <p>Integrity</p>
               </div>
@@ -58,6 +82,7 @@ const About = () => {
                   priority
                   width={20}
                   height={20}
+                  alt=''
                 />
                 <p>Mutual Respect</p>
               </div>
@@ -67,6 +92,7 @@ const About = () => {
                   priority
                   width={20}
                   height={20}
+                  alt=''
                 />
                 <p>Client Centricity</p>
               </div>
@@ -76,6 +102,7 @@ const About = () => {
                   priority
                   width={20}
                   height={20}
+                  alt=''
                 />
                 <p>Entrepreneural</p>
               </div>
@@ -85,6 +112,7 @@ const About = () => {
                   priority
                   width={20}
                   height={20}
+                  alt=''
                 />
                 <p>Executional Excellence</p>
               </div>
@@ -94,13 +122,14 @@ const About = () => {
                   priority
                   width={20}
                   height={20}
+                  alt=''
                 />
                 <p>Teamwork</p>
               </div>
             </div>
             <div className={styles.team}>
               <div className={styles['image-wrapper']}>
-                <Image src={'/images/overlay-team.png'} fill priority />
+                <Image src={'/images/overlay-team.png'} fill priority alt='' />
               </div>
               <div className={styles['overlay-1']}></div>
               <div className={styles.title}>
@@ -149,26 +178,59 @@ const About = () => {
         </div>
       </div>
       <div className={styles.focused}>
-        <h1>Our Industry Focused</h1>
+        <h1>Our Industry Approach</h1>
         <div className={styles.grid}>
           <div>
-            <h2>Collaboration Approach</h2>
+            <h2>Delivering Excellence</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute iru
+              Mineering sets itself apart with a meticulous approach to
+              technical advisory and offshore technology development. Our
+              unwavering commitment involves exhaustive due diligence,
+              meticulous attention to detail, and unwavering objectivity, all
+              delivered within a strictly confidential environment. This focus
+              has led to an unmatched track record. This success hinges on
+              several key principles: <br />
+              <br />
+              <ul>
+                <li>
+                  <b>Client-Centric Solutions:</b> We deliver cost-effective
+                  solutions tailored to your specific exploration goals,
+                  technical needs, and operational risks.
+                </li>
+                <li>
+                  <b>Advanced Practices &amp; Flexibility:</b> Leveraging the
+                  latest offshore engineering best practices, we provide a
+                  comprehensive framework that can be flexibly adapted to your
+                  project&apos;s unique scope and requirements.
+                </li>
+                <li>
+                  <b>Collaborative Expertise:</b> Our team investigates various
+                  design parameters and strategic locations to ensure optimal
+                  configurations that meet all relevant offshore industry
+                  certifications and best practices. Our highly skilled
+                  engineers bring in-depth knowledge of floating platforms to
+                  ensure your project meets regulatory requirements and delivers
+                  exceptional results.
+                </li>
+              </ul>
             </p>
           </div>
           <div>
-            <h2>Focus On Delivery</h2>
+            <h2>Alliance</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla par
+              Mineering fosters strategic alliances with industry experts who
+              complement our core strengths. These partnerships focus on either
+              separate but interconnected project scopes, or the formation of
+              joint project management teams.
+              <br />
+              <br />
+              In the first scenario, we might handle a project&#39;s FEED
+              (Front-End Engineering Design) and detailed engineering, while a
+              partner tackles offshore fabrication or specialized shipbuilding.
+              Alternatively, we can create joint teams combining our technical
+              advisors with specialists from other firms. Both approaches offer
+              clients access to global expertise and specialist knowledge,
+              ensuring impactful solutions tailored to local contexts.
             </p>
           </div>
         </div>

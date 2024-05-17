@@ -11,6 +11,14 @@
   position: relative;
   z-index: 2;
 
+  .no-data {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 30px;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
   .content-container {
     max-width: $max-width;
     margin: 0 auto;
