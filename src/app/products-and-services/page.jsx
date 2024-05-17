@@ -44,7 +44,7 @@ const Products = async () => {
               key={i}
               title={data.title.rendered}
               link={`/products-and-services/${data.slug}`}
-              // image={data.acf['featured-image']}
+              image={data.acf['featured-image']}
             />
           ))}
           {/* <ServiceCard
