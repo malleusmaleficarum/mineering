@@ -13,7 +13,7 @@ const Media = async ({ searchParams }) => {
   const url = searchParams.category
     ? `${process.env.NEXT_PUBLIC_API_URL}/posts?per_page=7&offset=0&categories=${searchParams.category}`
     : `${process.env.NEXT_PUBLIC_API_URL}/posts?per_page=7&offset=0`;
-  const response = await fetch(url, { next: { revalidate: 1 } });
+  const response = await fetch(url, { next: { revalidate: 10 } });
   const data = await response.json();
 
   const resCat = await fetch(

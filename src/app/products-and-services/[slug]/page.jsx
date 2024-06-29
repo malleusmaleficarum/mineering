@@ -11,7 +11,7 @@ export const metadata = {
 const DetailProduct = async ({ params }) => {
   const response = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/product?acf_format=standard&_fields=id,slug,title,acf,modified&slug=${params.slug}`,
-    { next: { revalidate: 1 } }
+    { next: { revalidate: 3600 } }
   );
   const data = await response.json();
   const sanitizeData = DOMPurify.sanitize(data[0].acf.content);

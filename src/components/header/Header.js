@@ -13,6 +13,7 @@ import {
 import Image from 'next/image';
 import Breadcrumb from './Breadcrumb';
 import Arrow from '../../../public/images/chevron-down.svg?svgr';
+// import { useSearchParams } from 'next/navigation';
 
 const Header = () => {
   const [isActive, setIsActive] = useState(false);
@@ -27,11 +28,17 @@ const Header = () => {
   const { scrollY } = useScroll();
   const [hide, setHide] = useState(false);
   const isLinkActive = (path) => path === pathname;
+  // const params = useSearchParams();
+  // const searchParams = params.get('category');
 
   useEffect(() => {
     setIsActive(false);
     // scrollToTop();
   }, [pathname]);
+
+  // useEffect(() => {
+  //   setIsActive(false);
+  // }, [searchParams]);
 
   useMotionValueEvent(scrollY, 'change', (latest) => {
     const previous = scrollY.getPrevious();
@@ -273,6 +280,7 @@ const Header = () => {
                                 <li key={data?.id}>
                                   <Link
                                     href={`/projects-and-resources?category=${data?.id}`}
+                                    onClick={() => setIsActive(false)}
                                   >
                                     {data?.name}
                                   </Link>
