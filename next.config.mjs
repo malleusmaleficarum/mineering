@@ -9,7 +9,7 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'testingwprestapi.000webhostapp.com',
+        hostname: 'be.mineering.com',
         port: '',
       },
     ],
