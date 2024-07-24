@@ -11,7 +11,7 @@ export const metadata = {
 const Products = async () => {
   const response = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/product?acf_format=standard&_fields=id,slug,title,acf,modified&orderby=title&order=asc`,
-    { next: { revalidate: 1 } }
+    { next: { revalidate: 10 } }
   );
   const data = await response.json();
 
