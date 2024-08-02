@@ -19,7 +19,7 @@ const MediaCard = ({ data, categories }) => {
       {/* Info */}
       <div className={styles['info-container']}>
         <div className={styles.top}>
-          <h1>{data.title.rendered}</h1>
+          <h1 dangerouslySetInnerHTML={{ __html: data.title.rendered }}></h1>
 
           <h2 dangerouslySetInnerHTML={{ __html: data.excerpt.rendered }}></h2>
           <h3>{catName[0].name}</h3>

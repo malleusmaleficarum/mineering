@@ -13,7 +13,7 @@ const SliderCard = ({ categories, data }) => {
       <div className={styles['img-container']}>
         <Image src={data?.fimg_url} fill priority alt='' />
       </div>
-      <h2>{data.title.rendered}</h2>
+      <h2 dangerouslySetInnerHTML={{ __html: data.title.rendered }}></h2>
       <h3>{catName[0].name}</h3>
       <div
         className={styles['exc-content']}

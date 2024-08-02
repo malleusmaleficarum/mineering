@@ -11,7 +11,8 @@ const dmSans = DM_Sans({
 
 export const metadata = {
   title: { default: 'Mineering', template: '%s | Mineering' },
-  description: '',
+  description:
+    'PT Mineering Energi International, a rapidly growing leader in offshore technology development and consulting, is headquartered in Jakarta, Indonesia.',
 };
 
 export default function RootLayout({ children }) {

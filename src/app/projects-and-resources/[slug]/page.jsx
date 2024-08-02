@@ -10,7 +10,8 @@ export const metadata = {
 
 const page = async ({ params }) => {
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/posts?slug=${params.slug}&_fields=date,title,slug,content,featured_media,fimg_url,categories`
+    `${process.env.NEXT_PUBLIC_API_URL}/posts?slug=${params.slug}&_fields=date,title,slug,content,featured_media,fimg_url,categories`,
+    { next: { revalidate: 10 } }
   );
   const data = await res.json();
 
@@ -22,7 +23,7 @@ const page = async ({ params }) => {
 
   return (
     <div className={styles.container}>
-      <h1>{data[0].title.rendered}</h1>
+      <h1 dangerouslySetInnerHTML={{ __html: data[0].title.rendered }}></h1>
 
       <div className={styles['image-container']}>
         <Image src={data[0].fimg_url} alt='' priority fill />
