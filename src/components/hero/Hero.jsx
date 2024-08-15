@@ -23,7 +23,13 @@ const Hero = () => {
           {/* <Link href={'#'}>All Services</Link> */}
         </div>
         <div className={styles['second-section']}>
-          <Image src={'/images/logo.png'} alt='logo' fill priority />
+          <Image
+            src={'/images/logo.png'}
+            alt='logo'
+            width={200}
+            height={50}
+            priority
+          />
         </div>
       </div>
     </div>

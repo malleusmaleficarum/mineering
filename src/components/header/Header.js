@@ -301,7 +301,7 @@ const Header = () => {
           )}
         </AnimatePresence>
       </nav>
-      <Breadcrumb path={path} />
+      {path.length > 1 && <Breadcrumb path={path} />}
     </motion.div>
   );
 };

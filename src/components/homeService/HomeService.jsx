@@ -2,7 +2,7 @@ import Link from 'next/link';
 import styles from './homeService.module.scss';
 import ServiceCard from './ServiceCard';
 
-const HomeService = () => {
+const HomeService = async () => {
   return (
     <div className={styles.full}>
       <div className={styles.container}>
@@ -13,21 +13,21 @@ const HomeService = () => {
         {/* Grid */}
         <div className={styles['content-container']}>
           <ServiceCard
-            title={'Asset Integrity Management System (AIMS)'}
-            link={
-              '/products-and-services/asset-integrity-management-system-aims'
-            }
-            image={`/images/aims.jpeg`}
-          />
-          <ServiceCard
             title={'Mineral Technology and Business'}
             link={'/products-and-services/mineral-technology-and-business'}
             image={`/images/mineral-3.jpg`}
           />
           <ServiceCard
-            title={'Engineering Services'}
-            link={'/products-and-services/engineering-services'}
-            image={`/images/engineering-services-1.jpeg`}
+            title={'Oil and Gas Solution'}
+            link={'/products-and-services/oil-and-gas-solution'}
+            image={`/images/oil-and-gas.jpg`}
+          />
+          <ServiceCard
+            title={'Asset Integrity Management System (AIMS)'}
+            link={
+              '/products-and-services/asset-integrity-management-system-aims'
+            }
+            image={`/images/aims.jpeg`}
           />
         </div>
       </div>
